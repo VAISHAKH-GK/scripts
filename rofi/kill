@@ -35,20 +35,17 @@ main() {
     # when we select one of the 'selected' options listed in dmenu.
     if [[ -n $selected ]]; then
         # Piping No/Yes into dmenu as a safety measure, in case you
-        answer="$(echo -e "Yes\nNo" | ${DMENU} "Kill $selected?" "$@")"
+        # answer="$(echo -e "Yes\nNo" | ${DMENU} "Kill $selected?" "$@")"
 
-        if [[ $answer == "Yes" ]]; then
+        # if [[ $answer == "Yes" ]]; then
             # This echo command prints everything before the first space.
-	    # Luke Smith has a video on why this is most efficient in this case
-	    # An alternative way to do it would be with awk or cut, both are less 
-            # efficient however.
-            kill -9 "${selected%% *}"
-            echo "Process $selected has been killed." && exit 0
-        else
+        kill -9 "${selected%% *}"
+        echo "Process $selected has been killed." && exit 0
+        # else
 	    # We want this script to exit with a 1 and not 0 because 1 means
 	    # an error, so this can be handled by other scripts better
             echo "Program terminated." && exit 1
-        fi
+        # fi
     fi
 }
 
