@@ -2,5 +2,4 @@
 
 swww init
 file=$(ls ~/wallpapers/| shuf -n 1)
-echo $file
 swww img ~/wallpapers/$file
