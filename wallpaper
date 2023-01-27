@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+swww init
+wallpaper=$(ls ~/wallpapers | rofi -dmenu -p Wallpaper )
+swww img ~/wallpapers/${wallpaper}
