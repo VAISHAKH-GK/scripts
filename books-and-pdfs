@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+path=~/books-and-pdfs/
+while [[ -d $path ]]; do
+  category=$(ls $path| rofi -dmenu -p "Book or Pdf")
+  if [[ $category == "" ]]; then
+    exit 0 
+  fi
+  path=${path}/${category}
+done 
+zathura "$path"
