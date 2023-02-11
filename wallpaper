@@ -2,4 +2,6 @@
 
 swww init
 wallpaper=$(ls ~/wallpapers | rofi -dmenu -p Wallpaper )
-swww img ~/wallpapers/${wallpaper}
+image=~/wallpapers/$wallpaper
+swww img $image
+cat $image > ~/.config/wallpaper.jpg

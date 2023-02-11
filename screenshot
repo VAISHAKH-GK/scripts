@@ -15,7 +15,7 @@ region
 focused
 EOF`
 
-FILENAME="$(date +'%Y-%m-%d-%H%M%S_screenshot.png')"
+FILENAME="$(date +'%Y-%m-%d-%H%M%S.png')"
 EXPENDED_FILENAME="/home/$USER/Pictures/screenshot/$FILENAME"
 
 if [[ $CHOICE == "fullscreen" ]]; then
