@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+FILENAME="$(date +'%Y-%m-%d-%H%M%S.png')"
+EXPENDED_FILENAME="/home/$USER/Pictures/screenshot/$FILENAME"
+
+grim $EXPENDED_FILENAME
+
+notify-send "Screenshot" "File saved as <i>'$FILENAME'" -i $EXPENDED_FILENAME
