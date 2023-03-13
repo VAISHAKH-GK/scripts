@@ -3,5 +3,7 @@
 swww init
 file=$(ls ~/wallpapers/| shuf -n 1)
 image=~/wallpapers/$file
-swww img $image
-cat $image > ~/.config/wallpaper.jpg
+extension="${image##*.}"
+swww img "$image"
+rm -rf ~/.config/current-wallpaper.*
+cp $image ~/.config/current-wallpaper.$extension
