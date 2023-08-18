@@ -9,7 +9,7 @@ function list_geometry () {
 
 FOCUSED=`list_geometry focused`
 
-CHOICE=`rofi -dmenu -p 'Screenshot' << EOF
+CHOICE=`rofi -dmenu -i -p 'Screenshot' << EOF
 fullscreen
 region
 focused
@@ -29,10 +29,11 @@ elif [[ $CHOICE == "" ]]; then
   exit 0
 fi
 
+sleep 1s
 
 if command -v swappy $>/dev/null
 then
-    EDIT_CHOICE=`rofi -dmenu -p 'Edit' -lines 2 << EOF
+    EDIT_CHOICE=`rofi -dmenu -i -p 'Edit' -lines 2 << EOF
 yes
 no
 EOF`

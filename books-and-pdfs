@@ -2,7 +2,7 @@
 
 path=~/books-and-pdfs/
 while [[ -d $path ]]; do
-  category=$(ls $path| rofi -dmenu -p "Book or Pdf")
+  category=$(ls $path| rofi -dmenu -i -p "Book or Pdf")
   if [[ $category == "" ]]; then
     exit 0 
   fi

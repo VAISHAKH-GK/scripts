@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 swww init
-wallpaper=$(ls ~/wallpapers | rofi -dmenu -p Wallpaper )
+wallpaper=$(ls ~/wallpapers | rofi -dmenu -i -p Wallpaper )
 image=~/wallpapers/$wallpaper
 extension="${image##*.}"
 swww img "$image"
