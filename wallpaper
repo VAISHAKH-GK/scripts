@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-swww init
-wallpaper=$(ls ~/wallpapers | rofi -dmenu -i -p Wallpaper )
-image=~/wallpapers/$wallpaper
-extension="${image##*.}"
-swww img "$image"
-rm -rf ~/.config/current-wallpaper.*
-cp $image ~/.config/current-wallpaper.$extension

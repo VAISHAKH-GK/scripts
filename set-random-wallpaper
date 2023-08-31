@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-swww init
-file=$(ls ~/wallpapers/| shuf -n 1)
-image=~/wallpapers/$file
-extension="${image##*.}"
-swww img "$image"
-rm -rf ~/.config/current-wallpaper.*
-cp $image ~/.config/current-wallpaper.$extension
