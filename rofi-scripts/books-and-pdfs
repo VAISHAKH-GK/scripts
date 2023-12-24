@@ -8,4 +8,10 @@ while [[ -d $path ]]; do
   fi
   path=${path}/${category}
 done 
-zathura "$path"
+ext="${path##*.}"
+if [[ "${ext}" == "epub" ]]; then
+    foliate "$path"
+else 
+    zathura "$path"
+fi
+
