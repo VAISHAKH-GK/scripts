@@ -9,4 +9,4 @@ if [[ $wal == "" ]]; then
   notify-send "Theme and Wallpaper" "Not changed"
   exit 1
 fi
-theme-and-wallpaper "$HOME/wallpapers/$wal"
+~/scripts/theme-and-wallpaper "$HOME/wallpapers/$wal"

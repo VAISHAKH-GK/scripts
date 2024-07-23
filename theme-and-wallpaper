@@ -3,7 +3,7 @@
 # ----------------------------------------------------- 
 # Select wallpaper and create color scheme
 # ----------------------------------------------------- 
-  
+
 wal=$1
 if [[ $wal == "" ]]; then
   notify-send "Theme and Wallpaper" "Not changed"
