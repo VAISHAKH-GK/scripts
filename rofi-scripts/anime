@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CHOICE=`rofi -dmenu -i -p 'ANIME' << EOF
+watch
+download`
+
+if [[ $CHOICE == 'watch' ]]; then
+    ani-cli --rofi
+elif [[ $CHOICE == 'download' ]]; then
+    ani-cli -d --rofi 
+fi  
