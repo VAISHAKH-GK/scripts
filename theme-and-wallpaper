@@ -32,7 +32,9 @@ newwall=$(echo $wallpaper | sed "s|$HOME/wallpapers/||g")
 # ----------------------------------------------------- 
 swww img $wallpaper --transition-step 20 --transition-fps=20
 killall waybar
+killall gjs
 waybar &
+ags run &
 
 extension="${wallpaper##*.}"
 rm -rf ~/.config/current-wallpaper.*
