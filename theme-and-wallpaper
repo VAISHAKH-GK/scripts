@@ -36,10 +36,6 @@ killall gjs
 waybar &
 ags run &
 
-extension="${wallpaper##*.}"
-rm -rf ~/.config/current-wallpaper.*
-cp $wallpaper ~/.config/current-wallpaper.$extension
-
 # ----------------------------------------------------- 
 # Send notification
 # ----------------------------------------------------- 

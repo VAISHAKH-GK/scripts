@@ -1,13 +1,4 @@
 #!/usr/bin/env bash
 
-device=$(bluetoothctl devices | awk {'print $3'} | rofi -dmenu -i -p Bluetooth)
-mac=$(bluetoothctl devices | grep $device | awk {'print $2'} )
-if [[ -z "$mac" ]]; then
-  exit 0
-fi
-connected=$(bluetoothctl devices Connected | grep $mac)
-if [[ -z "$connected" ]]; then
-  bluetoothctl connect $mac || notify-send "Connection failed"
-else
-  bluetoothctl disconnect $mac 
-fi
+# need to install rofi-bluetooth-git bluez-utils
+rofi-bluetooth
